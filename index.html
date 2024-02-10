@@ -1,0 +1,133 @@
+<!DOCTYPE.html>
+
+<html>
+<head>
+    <!-- <link rel="stylesheet" href="stempalooza.css">    -->
+    <title>Home Insurance Risk Analysis App</title>
+    
+    
+    <meta name="theme-color" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="InsureSafe">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="insureSafe.png">
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 84;
+        }
+
+        img {
+            width: 1070px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        body {
+            background-color: #000000;
+            font-family: cursive;
+            font-display: block;
+            color: lightgrey;
+            width: 1170px;
+            height: 2532px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            margin-left: 52px;
+            font-size: 65;
+            font-family: cursive;
+        }
+
+        input[type="text"] {
+            width: 30%;
+            padding: 12px;
+            border: 10px solid #ccc;
+            border-radius: 10000px;
+            margin-bottom: 20px;
+            text-align: center;
+            margin-left: 32px;
+            font-size: 20
+        }
+
+        label2 {
+            margin-bottom: 10px;
+            margin-left: 52px;
+            font-size: 30;
+            font-family: cursive;
+            width: 500px;
+            text-align-last: center;
+        }
+
+        ah1 {
+            font-size: 130;
+            font-family: cursive;
+            margin-left: 35px;
+            margin-bottom: 25px
+        }
+
+        .centered-embed {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        height: 90%;
+    }
+    </style>
+</head>
+
+<body>
+
+    <u><h1>Home Insurance Risk Analysis</h1></u>
+
+    <img src="https://the-homestore.com/wp-content/uploads/slider2/slide-5-scaled.jpg"><br><br><br><br>
+
+    <!-- <embed class="centered-embed" src="https://stage-widget.getmybubble.co/home/" /> -->
+
+    <h1 style="font-size: 50px;text-align: left;">Personal Loan Info Generator</h1>
+
+    <!-- Amortization Calculator Widget START --><script src="https://usmortgagecalculator.org/widget/2.0/js/amortizationcalc-loader.min.js" type="text/javascript"></script><div id="acww-widgetwrapper" style="min-width:250px;width:100%;"><div id="acww-widget" style="position:relative;padding-top:0;padding-bottom:280px;height:0;overflow:hidden;"></div><div id="acww-more" style="background:#333;font:normal 13px/1 Helvetica, Arial, Verdana, Sans-serif;padding:10px 0;color:#FFF;text-align:center;width:100%;clear:both;margin:0;clear:both;float:left;"><a style="background:#333;color:#FFF;text-decoration:none;border-bottom:1px dotted #ccc;" href="https://usmortgagecalculator.org/" title="Mortgage Calculator" rel="nofollow" target="_blank">usmortgagecalculator.org</a></div></div><!-- Amortization Calculator Widget END -->
+    <hr><br><br><br><br>
+
+    <label for="credit">Credit Score:</label>
+    <input type="text" id="credit" name="credit" required><br><br>
+
+    <label for="value">Home Value:</label>
+    <input type="text" id="value" name="value" required><br><br>
+
+    <label for="down">Down Payment (%):</label>
+    <input type="text" id="down" name="down" required><br><br>
+
+    <label for="term">Loan Term:</label>
+    <input type="text" id="term" name="term" required><br><br>
+
+    <label for="interest">Interest Rate Type:</label>
+    <input type="text" id="type" name="type" required><br><br>
+
+    <label for="loan">Loan Type:</label>
+    <input type="text" id="loan" name="loan" required><br><br>
+
+    <label2 for="monthlycost">Estimated Home Insurance Cost (Monthly):</label2>
+    <ah1 id="monthlycost">$115</ah1><br><br><br><br>
+
+    <script>
+        function calculateInsuranceCost() {
+            var homeValue = parseFloat(document.getElementById("value").value);
+            var insuranceRate = 0.35; // Example insurance rate (0.35%)
+            var monthlyInsuranceCost = (homeValue * insuranceRate) / 12;
+
+            // Update the content of the span element with the calculated monthly cost
+            document.getElementById("monthlycost").textContent = "$" + monthlyInsuranceCost.toFixed(2);
+        }
+
+        // Call the calculateInsuranceCost function when any input field changes
+        var inputFields = document.querySelectorAll("input");
+        inputFields.forEach(function(input) {
+            input.addEventListener("input", calculateInsuranceCost);
+        });
+    </script>
+</body>
+</html>
